@@ -45,15 +45,12 @@ async function start() {
 	// function to render the new HTML
 	const renderHTML = render(employees);
 	
-	console.log(employees);
-	console.log(renderHTML);
-	
 	// write a new file with the rendered HTML
 	async function init() {
 		try {
 			const file = renderHTML;		
 			await wfa(outputPath, file);
-			console.log('Success: New file has been generated.');
+			console.log('Success: New team.html has been generated.');
 		} catch (err) {
 			console.log(err);
 		}
